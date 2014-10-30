@@ -1,18 +1,7 @@
 #!/bin/bash
 
-set -Eeu
+set -Eeux
 set -o pipefail
-
-if [ ! "$ROOT_CHECK" = "0" ]; then
-   if [ "$(id -u)" != "0" ]; then
-       true "ERROR: This must be run as root (sudo)!${reset}"
-       exit 1
-   else
-       true "INFO: Script running as root."
-   fi
-fi
-
-set -x
 
 distname=precise
 tgtdir="$(pwd)/$distname"
