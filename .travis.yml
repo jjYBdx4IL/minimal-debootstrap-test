@@ -1,5 +1,2 @@
-script: uname -a
-script: df -h
-script: free
-script: cat /etc/debian_version /etc/{lsb,os}-release
-script: sudo -E ./create_img.sh
+script: ./create_img.sh
+cache: apt
